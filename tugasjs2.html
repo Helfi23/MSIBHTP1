@@ -1,0 +1,28 @@
+<script>
+    let Pegawai = "Helfi";
+    let Gaji = "Manager";
+    let status = "Lajang";
+    let harsat = 0;
+    switch (Gaji){
+        case 'Manager' : Gaji = 10000000; break;
+        case 'Asisten Manager' : Gaji = 8000000; break;
+        case 'Staff' : Gaji = 5000000; break;
+        default : Gaji = 0;
+    };
+    
+    let tunjangan = 0.1 * Gaji;
+    let bpjs = 0.1 * Gaji;
+    let menikah = 0.1 * gaji;
+    if (status == 'Menikah') menikah = 0.1 * Gaji;
+    else if ( status == 'Lajang') menikah = 1 * gaji;
+    else diskon = 0;
+
+
+    document.write("Data Pegawai " +
+    "<br> Pegawai : " + Pegawai +
+    "<br> Gaji : " + Gaji );
+    // "<br> Tunjangan Kerja : " + tunjangan +
+    // "<br> BPJS : " +bpjs );_;
+
+
+</script>
