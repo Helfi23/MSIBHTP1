@@ -1,0 +1,35 @@
+<script>
+    let pelanggan = "Helfi";
+    let produk = "motor";
+
+    
+
+    let harsat = 0;
+    switch (produk){
+        case 'tv' : harsat = 3000000; break;
+        case 'motor' : harsat = 120000000; break;
+        case 'kulkas' : harsat = 4000000; break;
+        default : harsat = 0;
+    }
+    let jmbeli =3;
+    let bruto = harsat * jmbeli;
+    let  diskon = 0.05 * bruto;
+    if (produk == 'tv') diskon = 0.3 * bruto;
+    else if ( produk == 'motor') diskon = -.2 * bruto;
+    else diskon = 0.05 * bruto;
+    let ppn = bruto * 0.11;
+
+    let hartol = bruto-diskon-ppn;
+
+    document.write("Data Pembelian " +
+    "<br> Pelanggan : " + pelanggan +
+    "<br> Produk : " + produk +
+    "<br> Jumlah Beli : "+ jmbeli +
+    "<br> Harga Satuan : " + harsat +
+    "<br> Total Harga : " + bruto +
+    "<br> Diskon : " + diskon +
+    "<br> PPN : " +ppn +
+    "<br> Total Harga : " + hartol);
+
+
+</script>
