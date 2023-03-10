@@ -1,0 +1,40 @@
+<script>
+
+    let pelanggan = "Helfi";
+    let produk ="kulkas";
+
+
+    if (produk == 'TV'){
+        harsat = 300000;
+    }
+    else if (produk == 'Motor'){
+        harsat = 12000000;
+    }
+    else if (produk == 'kulkas'){
+        harsat = 40000000;
+    }
+    else{
+        harsat=0;
+    }
+
+    let jmbeli =10;
+    let bruto = harsat * jmbeli;
+
+    // let diskon = (produk == 'Motor')? 0.1 * bruto : 0;
+    if (produk == 'Motor') {diskon = 0.1 *bruto;
+    }else {
+        diskon = 0 * bruto;
+    }
+    let harga_diskon = bruto - diskon;
+
+
+    document.write(" Data Pembeli" +
+    "<br> Pelanggan &nbsp " + pelanggan + 
+    "<br> Produck &nbsp" + produk +
+    "<br> Harga &nbsp" + harsat +
+    "<br>Jumlah Barang yang dibeli &nbsp" + jmbeli +
+    "<br> Total harga dari pembelian &nbsp" + bruto +
+    "<br> Hasil Diskon " + harga_diskon);
+
+
+</script>
