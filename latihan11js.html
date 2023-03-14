@@ -1,0 +1,37 @@
+<script>
+
+    let p1 = {nama:"Helfi",nilai:99};
+    let p2 = {nama:"H",nilai:91};
+    let p3 = {nama:"E",nilai:92};
+    let p4 = {nama:"L",nilai:93};
+    let p5 = {nama:"F",nilai:94};
+    let p6 = {nama:"I",nilai:95};
+    let p7 = {nama:"A",nilai:96};
+
+    let person =[p1,p2,p3,p4,p5,p6,p7];
+</script>
+<h3>
+    <table style="padding: 10; text-align: center; width: 100%;">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                var no = 1;
+                for (p of person){
+                   let ket = (p.nilai >= 90)? "Lulus" : "Gagal";
+                    document.write(`<tr bgcolor="">
+                <td>${no++}</td>
+                <td>${p.nama}</td>
+                <td>${p.nilai}</td>
+                <td>${ket}</td>
+            </tr>`);
+        }
+        </script>
+        </tbody>
+    </table>
+</h3>
