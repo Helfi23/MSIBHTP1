@@ -1,0 +1,90 @@
+<!-- Tugas -->
+<!-- Lengkapi source pada latihan 11 Javascript dengan ketentuan sebagai berikut:
+set grade A - E (menggunakan if multi kondisi)
+                   // A = 90 - 100, B 80 - 89 dan seterusnya sampai E
+
+                   //set predikat (menggunakan swtich case)
+
+                   //A = Sangat baik, B = Baik, C = Cukup, D= Kurang, E = SAngat kurang
+                   //set warna warni table menggunakan looping -->
+
+<!-- Upload source di github dan kirim linknya ke LMS -->
+<script>
+    // membuat data siswa
+        const siswa = [
+        { nama: "H", nilai: 100 },
+        { nama: "E", nilai: 80 },
+        { nama: "L", nilai: 70 },
+        { nama: "F", nilai: 60 },
+        { nama: "I", nilai: 50 },
+        ];
+    // membuat fungsi grade
+        function getGrade(nilai) {
+        if (nilai >= 90 && nilai <= 100) {
+            return "A";
+        } else if (nilai >= 80 && nilai <= 89) {
+            return "B";
+        } else if (nilai >= 70 && nilai <= 79) {
+            return "C";
+        } else if (nilai >= 60 && nilai <= 69) {
+            return "D";
+        } else {
+            return "E";
+        }
+        }
+    // membuat fungsi predikat
+        function getPredikat(grade) {
+        switch (grade) {
+            case "A":
+            return "Sangat baik";
+            case "B":
+            return "Baik";
+            case "C":
+            return "Cukup";
+            case "D":
+            return "Kurang";
+            default:
+            return "Sangat kurang";
+        }
+        }
+    // membuat tampilan table
+        let table = "<table>";
+        table += "<tr>";
+        table += "<th>Nama</th>";
+        table += "<th>Nilai</th>";
+        table += "<th>Grade</th>";
+        table += "<th>Predikat</th>";
+        table += "</tr>";
+        for (let i = 0; i < siswa.length; i++) {
+        let grade = getGrade(siswa[i].nilai);
+        let predikat = getPredikat(grade);
+        let warna;
+        switch (grade) {
+            case "A":
+            warna = "green"; 
+            break;
+            case "B":
+            warna = "aqua"; 
+            break;
+            case "C":
+            warna = "blue"; 
+            break;
+            case "D":
+            warna = "yellow"; 
+            break;
+            default:
+            warna = "red"; 
+        }
+        table += "<tr style='background-color:" + warna + ";'>";
+        table += "<td>" + siswa[i].nama + "</td>";
+        table += "<td>" + siswa[i].nilai + "</td>";
+        table += "<td>" + grade + "</td>";
+        table += "<td>" + predikat + "</td>";
+        table += "</tr>";
+        }
+        table += "</table>";
+    
+        document.write(table);
+    
+    </script>
+    
