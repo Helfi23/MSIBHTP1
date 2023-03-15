@@ -1,7 +1,7 @@
 function tambah(){
     var frm = document.getElementById('kalkulator');
-    var a1 = parseFloat(frm.angka.value);
-    var a2 = parseFloat(frm.angka2.value);
+    var a1 = parseFloat(frm.number1.value);
+    var a2 = parseFloat(frm.number2.value);
     if(isNaN(a1) && isNaN(a2)) {
         alert("Kolom Angka Tidak Boleh Kosong");
     }else{
@@ -12,8 +12,8 @@ function tambah(){
 
 function kurang(){
     var frm = document.getElementById('kalkulator');
-    var a1 = parseFloat(frm.angka.value);
-    var a2 = parseFloat(frm.angka2.value);
+    var a1 = parseFloat(frm.number1.value);
+    var a2 = parseFloat(frm.number2.value);
     if(isNaN(a1) && isNaN(a2)) {
         alert("Kolom Angka Tidak Boleh Kosong");
     }else{
@@ -23,8 +23,8 @@ function kurang(){
 }
 function bagi(){
     var frm = document.getElementById('kalkulator');
-    var a1 = parseFloat(frm.angka.value);
-    var a2 = parseFloat(frm.angka2.value);
+    var a1 = parseFloat(frm.number1.value);
+    var a2 = parseFloat(frm.number2.value);
     if(isNaN(a1) && isNaN(a2)) {
         alert("Kolom Angka Tidak Boleh Kosong");
     }else{
@@ -34,14 +34,19 @@ function bagi(){
 }
 function kali(){
     var frm = document.getElementById('kalkulator');
-    var a1 = parseFloat(frm.angka.value);
-    var a2 = parseFloat(frm.angka2.value);
+    var a1 = parseFloat(frm.number1.value);
+    var a2 = parseFloat(frm.number2.value);
     if(isNaN(a1) && isNaN(a2)) {
         alert("Kolom Angka Tidak Boleh Kosong");
     }else{
         var total = a1*a2;
         frm.hasil.value = total;
     }
+}
+let display = document.getElementById("clear");
+
+function clearCalculator() {
+  display.value = "";
 }
 
 /*tugas ke 4 Javascript

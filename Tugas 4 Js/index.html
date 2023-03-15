@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kalkulator</title>
+</head>
+<body>
+    <Form id="kalkulator">  
+        <table style="border: solid 4px; background-color: aqua; align-items: center; text-align: center;">
+            <tr>
+                <th colspan="2"><center>Kalkulator Web</center></th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Masukan Angka  : </label>
+                </td>
+                <td>
+                    <input type="number" name="number1" id="" placeholder="Masukan Angka Pertama">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Masukan Angka  : </label>
+                </td>
+                <td>
+                    <input type="number" name="number2" id="" placeholder="Masukan Angka Kedua">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Hasil &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </label>
+                </td>
+                <td>
+                    <input type="number" name="hasil" placeholder="Hasil" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <button type="button" name="btn_tambah" onclick="tambah()">+</button>
+                    <button type="button" name="btn_tambah" onclick="kurang()">-</button>
+                    <button type="button" name="btn_tambah" onclick="bagi()">/</button>
+                    <button type="button" name="btn_tambah" onclick="kali()">*</button>
+                    <button id="clear" onclick="clearCalculator()">AC</button>
+                </td>   
+
+            </tr>
+        </table>
+    </Form>
+    
+</body>
+    <script src="./kalkulatorjs.js"></script>
+</html>
