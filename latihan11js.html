@@ -8,7 +8,37 @@
     let p6 = {nama:"I",nilai:95};
     let p7 = {nama:"A",nilai:96};
 
-    let person =[p1,p2,p3,p4,p5,p6,p7];
+    let siswa =[p1,p2,p3,p4,p5,p6,p7];
+
+      // membuat fungsi grade
+      function getGrade(nilai) {
+        if (nilai >= 90 && nilai <= 100) {
+            return "A";
+        } else if (nilai >= 80 && nilai <= 89) {
+            return "B";
+        } else if (nilai >= 70 && nilai <= 79) {
+            return "C";
+        } else if (nilai >= 60 && nilai <= 69) {
+            return "D";
+        } else {
+            return "E";
+        }
+        }
+         // membuat fungsi predikat
+         function getPredikat(grade) {
+        switch (grade) {
+            case "A":
+            return "Sangat baik";
+            case "B":
+            return "Baik";
+            case "C":
+            return "Cukup";
+            case "D":
+            return "Kurang";
+            default:
+            return "Sangat kurang";
+        }
+        }
 </script>
 <h3>
     <table style="padding: 10; text-align: center; width: 100%;">
@@ -21,16 +51,39 @@
         </thead>
         <tbody>
             <script>
+                    for (let i = 0; i < siswa.length; i++) {
+        let grade = getGrade(siswa[i].nilai);
+        let predikat = getPredikat(grade);
+        let warna;
+        switch (grade) {
+            case "A":
+            warna = "green"; 
+            break;
+            case "B":
+            warna = "aqua"; 
+            break;
+            case "C":
+            warna = "blue"; 
+            break;
+            case "D":
+            warna = "yellow"; 
+            break;
+            default:
+            warna = "red"; 
+        }
                 var no = 1;
-                for (p of person){
+                for (p of siswa){
                    let ket = (p.nilai >= 90)? "Lulus" : "Gagal";
                     document.write(`<tr bgcolor="">
                 <td>${no++}</td>
                 <td>${p.nama}</td>
                 <td>${p.nilai}</td>
+                <td>${grade}</td>
+                <td>${predikar}</td>
                 <td>${ket}</td>
             </tr>`);
         }
+    }
         </script>
         </tbody>
     </table>

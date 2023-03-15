@@ -11,13 +11,13 @@ set grade A - E (menggunakan if multi kondisi)
 <!-- Upload source di github dan kirim linknya ke LMS -->
 <script>
     // membuat data siswa
-        const siswa = [
-        { nama: "H", nilai: 100 },
-        { nama: "E", nilai: 80 },
-        { nama: "L", nilai: 70 },
-        { nama: "F", nilai: 60 },
-        { nama: "I", nilai: 50 },
-        ];
+    let p1 = {nama:"Helfi",nilai:99};
+    let p2 = {nama:"H",nilai:80};
+    let p3 = {nama:"E",nilai:70};
+    let p4 = {nama:"L",nilai:60};
+    let p5 = {nama:"F",nilai:50};
+    let p6 = {nama:"I",nilai:0};
+    let siswa =[p1,p2,p3,p4,p5,p6];
     // membuat fungsi grade
         function getGrade(nilai) {
         if (nilai >= 90 && nilai <= 100) {
@@ -50,11 +50,13 @@ set grade A - E (menggunakan if multi kondisi)
     // membuat tampilan table
         let table = "<table>";
         table += "<tr>";
+        table += "<th>No</th>";
         table += "<th>Nama</th>";
         table += "<th>Nilai</th>";
         table += "<th>Grade</th>";
         table += "<th>Predikat</th>";
         table += "</tr>";
+        
         for (let i = 0; i < siswa.length; i++) {
         let grade = getGrade(siswa[i].nilai);
         let predikat = getPredikat(grade);
@@ -75,7 +77,9 @@ set grade A - E (menggunakan if multi kondisi)
             default:
             warna = "red"; 
         }
+        var no =1;
         table += "<tr style='background-color:" + warna + ";'>";
+        table += "<td>" + no++ +"</td>";
         table += "<td>" + siswa[i].nama + "</td>";
         table += "<td>" + siswa[i].nilai + "</td>";
         table += "<td>" + grade + "</td>";
