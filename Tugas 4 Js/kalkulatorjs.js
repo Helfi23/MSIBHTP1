@@ -43,6 +43,17 @@ function kali(){
         frm.hasil.value = total;
     }
 }
+function pangkat(){
+    var frm = document.getElementById('kalkulator');
+    var a1 = parseFloat(frm.number1.value);
+    var a2 = parseFloat(frm.number2.value);
+    if(isNaN(a1) && isNaN(a2)) {
+        alert("Kolom Angka Tidak Boleh Kosong");
+    }else{
+        var total = a1**a2;
+        frm.hasil.value = total;
+    }
+}
 let display = document.getElementById("clear");
 
 function clearCalculator() {
