@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+</head>
+<body>
+    <table id="datapegawai" class="display" style="width:100%">
+        <thead>
+            <tr style="background-color: aqua;">
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody style="background-color: azure;">
+            <tr>
+                <td>Helfi Apriliyandi Firdaos</td>
+                <td>Junior Backend Developer</td>
+                <td>PT XYZ Anugerah Ramadhan</td>
+                <td>23</td>
+                <td>2023-04-25</td>
+                <td>$100.100.100</td>
+                <td>
+                    <img src="assets/image/Helfi3.jpg" alt="" width="10%">
+                </td>
+            </tr>
+            <tr>
+                <td>Helfi Apriliyandi Firdaos</td>
+                <td>Junior Backend Developer</td>
+                <td>PT XYZ Anugerah Ramadhan</td>
+                <td>23</td>
+                <td>2023-04-25</td>
+                <td>$100.100.100</td>
+                <td>
+                    <img src="assets/image/Helfi2.png" alt="" width="10%">
+                </td>
+            </tr>
+            <tr>
+                <td>Helfi Apriliyandi Firdaos</td>
+                <td>Junior Backend Developer</td>
+                <td>PT XYZ Anugerah Ramadhan</td>
+                <td>23</td>
+                <td>2023-04-25</td>
+                <td>$100.100.100</td>
+                <td>
+                    <img src="assets/image/helfi.jpg" alt="" width="10%">
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Image</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+<script src="assets/js/jquery-3.6.4.js"></script>
+<script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/dataTables.buttons.min.js"></script>
+<script src="assets/js/jszip.min.js"></script>
+<script src="assets/js/pdfmake.min.js"></script>
+<script src="assets/js/vfs_fonts.js"></script>
+<script src="assets/js/buttons.html5.min.js"></script>
+<script src="assets/js/buttons.print.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+<script>
+ $(document).ready(function() {
+    $('#datapegawai').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+    $("img").click(function(){
+        $(this).hide();
+    })
+} );
+// $(document).ready(function(){
+//             $("img").click(function(){
+//                 $(this).hide();
+//             });
+//         });
+</script>
+</html>
