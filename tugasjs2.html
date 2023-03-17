@@ -1,28 +1,40 @@
 <script>
-    let Pegawai = "Helfi";
-    let Gaji = "Manager";
-    let status = "Lajang";
-    let harsat = 0;
-    switch (Gaji){
-        case 'Manager' : Gaji = 10000000; break;
-        case 'Asisten Manager' : Gaji = 8000000; break;
-        case 'Staff' : Gaji = 5000000; break;
-        default : Gaji = 0;
-    };
-    
-    let tunjangan = 0.1 * Gaji;
-    let bpjs = 0.1 * Gaji;
-    let menikah = 0.1 * gaji;
-    if (status == 'Menikah') menikah = 0.1 * Gaji;
-    else if ( status == 'Lajang') menikah = 1 * gaji;
-    else diskon = 0;
+const nama = "Helfi Apriliyandi Firdaos";
+const jabatan = "Staff";
+const status = "menikah";
 
 
-    document.write("Data Pegawai " +
-    "<br> Pegawai : " + Pegawai +
-    "<br> Gaji : " + Gaji );
-    // "<br> Tunjangan Kerja : " + tunjangan +
-    // "<br> BPJS : " +bpjs );_;
+let gajiPokok = 0;
 
+if (jabatan === "Manager") {
+  gajiPokok = 10000000;
+} else if (jabatan === "Asisten manager") {
+  gajiPokok = 8000000;
+} else if (jabatan === "Staff") {
+  gajiPokok = 5000000;
+}
 
+// hitung tunjangan jabatan
+const tunjanganJabatan = 0.1 * gajiPokok;
+
+// hitung tunjangan keluarga
+let tunjanganKeluarga = 0;
+if (status === "menikah") {
+  tunjanganKeluarga = 0.1 * gajiPokok;
+}
+
+// hitung BPJS
+const bpjs = 0.1 * gajiPokok;
+
+// hitung total pendapatan
+const totalPendapatan = gajiPokok + tunjanganJabatan + tunjanganKeluarga;
+
+// cetak informasi gaji pegawai
+document.write("Nama: " + nama +
+"<br>Jabatan: " + jabatan +
+"<br>Gaji Pokok: " + gajiPokok +
+"<br>Tunjangan Jabatan: " + tunjanganJabatan +
+"<br>Tunjangan Keluarga: " + tunjanganKeluarga +
+"<br>BPJS: " + bpjs +
+"<br>Total Pendapatan: " + totalPendapatan);
 </script>

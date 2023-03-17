@@ -1,0 +1,20 @@
+<marquee behavior="" direction="">
+    <h1>Belajar DOM dan Event handler</h1>
+</marquee>
+
+<form action="" id="frm">
+    Nama : <input type="text" name="nama"/>
+
+    <input type="button" name="proses" value="salam" onclick="salam()"/>
+</form>
+<h1 id="hasil"></h1>
+<script>
+    function salam(){
+        let siswa = document.getElementById("frm").nama.value;
+        let input = "Selamat Pagi " + siswa;
+        let no_input = 'Maaf nama anda belum terisi';
+
+        let hasil = (siswa != '')?input : no_input;
+        document.getElementById('hasil').innerHTML = hasil;
+    }
+</script>

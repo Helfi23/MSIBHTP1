@@ -1,7 +1,7 @@
 <script>
 
     let siswa = "helfi budug";
-    let nilai = " 75";
+    let nilai = 62;
     let grade = "";
 
 
@@ -9,10 +9,9 @@
     else if(nilai > 75 && nilai <= 84) grade = "B";
     else if(nilai > 60 && nilai <= 74) grade = "C";
     else if(nilai > 30 && nilai <= 59) grade = "D";
-    else if(nilai > 0 && nilai <= 29) grade = "E";
+    else if(nilai >= 0 && nilai <= 29) grade = "E";
+    else grade = "";
 
-    else grade="";
-
-    document.write("Siswa Bernama " + Siswa + " Dengan Nilai "+nilai+ " Dan Peringkat "+grade);
+document.write("Siswa Bernama " + siswa + "<br>Dengan Nilai " + nilai + "<br> Dan Grade " +grade );
 
 </script>
