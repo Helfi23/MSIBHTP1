@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./stylephp2.css">
 </head>
 <body>
-    <form action="">
+<h2>MASUKAN GAJI KARYAWAN PT XYZ</h2>
+    <form action="" method="post">
+    
         <label for=""> Jabatan :</label>
         <select name="jabatan" id="jabatan">
             <option value="">----- Pilih Jabatan -----</option>
