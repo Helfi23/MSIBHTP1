@@ -10,7 +10,6 @@
 <body>
 <h2>MASUKAN GAJI KARYAWAN PT XYZ</h2>
     <form action="" method="post">
-    
         <label for=""> Jabatan :</label>
         <select name="jabatan" id="jabatan">
             <option value="">----- Pilih Jabatan -----</option>
