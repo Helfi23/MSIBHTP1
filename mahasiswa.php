@@ -1,5 +1,5 @@
 <?php
-require_once 'Person.php';
+require_once './Person.php';
 class Mahasiswa extends Person{
 
     public $semester;

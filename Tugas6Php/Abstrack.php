@@ -5,4 +5,5 @@ abstract class Bentuk2D{
 
 }
 
+
 ?>

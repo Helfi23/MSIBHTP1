@@ -1,5 +1,5 @@
 <?php
-require_once 'abstrack.php';
+require_once './abstrack1.php';
 
 class Kambing extends Hewan{
     public function bersuara(){
