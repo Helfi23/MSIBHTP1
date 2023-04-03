@@ -19,23 +19,65 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-4">
-              <span class="badge badge-default">Naik. Kapal</span>
-            </div>
-            <div class="col-md-4">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Home</a>
+        <div class="col-md-1">
+          <span class="badge badge-default">Tugas</span>
+        </div>
+        <div class="col-md-2">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Link <span class="sr-only">(current)</span></a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Profile</a>
+                  <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Messages</a>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="http://example.com"
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    >Dropdown link</a
+                  >
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
                 </li>
-                <li class="nav-item dropdown ml-md-auto">
+              </ul>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" />
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                  Search
+                </button>
+              </form>
+              <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Link <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
                     href="http://example.com"
@@ -56,10 +98,11 @@
                 </li>
               </ul>
             </div>
-            <div class="col-md-4" style="text-align: right">
-              <h6>Login Register</h6>
-            </div>
-          </div>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
           <div class="carousel slide" id="carousel-876898">
             <ol class="carousel-indicators">
               <li data-slide-to="0" data-target="#carousel-876898"></li>
@@ -163,10 +206,7 @@
               />
             </div>
             <div class="col-md-6">
-              <img
-                alt="Bootstrap Image Preview"
-                src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg"
-              />
+              <span class="badge badge-default">Label</span>
               <h3>h3. Lorem ipsum dolor sit amet.</h3>
               <p>
                 Lorem ipsum dolor sit amet,
@@ -188,6 +228,11 @@
                   eu.</small
                 >
               </p>
+              <img
+                alt="Bootstrap Image Preview"
+                src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg"
+                class="rounded-circle"
+              />
             </div>
           </div>
           <div class="row">
